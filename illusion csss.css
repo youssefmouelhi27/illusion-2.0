@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -148,4 +147,369 @@ body {
     font-size: 20px;
     margin-bottom: 35px;
     color: #5A4636;
+}
+
+.hero-images {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-img-main {
+    grid-column: span 2;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+.hero-img-small {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+.hero-images img:hover {
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #C17F3C;
+    color: white;
+    padding: 16px 45px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(193, 127, 60, 0.3);
+}
+
+.btn:hover {
+    background-color: #D4A05E;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(193, 127, 60, 0.4);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+}
+
+
+.creations {
+    padding: 100px 60px;
+    background-color: #F5EFE6;
+    position: relative;
+}
+
+.creations h2 {
+    font-size: 64px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #3D2817;
+    border-bottom: 3px solid #3D2817;
+    padding-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.creations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.creation-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.creation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.creation-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.creation-card:hover img {
+    transform: scale(1.1);
+}
+
+.btn-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+
+.mobile-hero {
+    display: none;
+    padding: 50px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.mobile-hero::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #C17F3C;
+    border-radius: 50% 30% 40% 60%;
+    top: -150px;
+    right: -150px;
+    opacity: 0.8;
+    z-index: 0;
+}
+
+.mobile-logo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.mobile-hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    color: #3D2817;
+}
+
+.mobile-hero h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #3D2817;
+}
+
+.mobile-hero h1 {
+    font-size: 32px;
+    color: #C17F3C;
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.mobile-hero .btn {
+    margin-bottom: 40px;
+}
+
+.mobile-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    margin: 0 auto;
+}
+
+.mobile-footer {
+    margin-top: 50px;
+    font-size: 18px;
+    color: #3D2817;
+}
+
+
+
+.mobile-creations {
+    display: none;
+    padding: 60px 30px;
+    text-align: center;
+    background-color: #F5EFE6;
+}
+
+.mobile-creations h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #3D2817;
+    border-bottom: 2px solid #3D2817;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+.mobile-creations-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.mobile-creations-grid img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+
+footer {
+    background-color: #3D2817;
+    color: #F5EFE6;
+    text-align: center;
+    padding: 40px 30px;
+    margin-top: 100px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+ 
+    .nav {
+        flex-direction: column;
+        padding: 20px 30px;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu {
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu a {
+        font-size: 16px;
+    }
+
+  
+    .hero {
+        display: none;
+    }
+
+    .creations {
+        display: none;
+    }
+
+ 
+    .mobile-hero {
+        display: block;
+    }
+
+    .mobile-creations {
+        display: block;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .mobile-hero {
+        display: none;
+    }
+
+    .mobile-creations {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-images {
+        max-width: 600px;
+    }
+
+    .creations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        padding: 20px 40px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .nav {
+        padding: 30px 100px;
+    }
+
+    .hero {
+        padding: 100px 100px;
+    }
+
+    .creations {
+        padding: 120px 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 64px;
+    }
+
+    .creations h2 {
+        font-size: 72px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content,
+.creation-card {
+    animation: fadeIn 0.8s ease-out;
+}
+
+.creation-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.creation-card:nth-child(3) {
+    animation-delay: 0.4s;
 }
